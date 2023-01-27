@@ -11,7 +11,7 @@ fi
 
 echo "Version: $VERSION"
 
-IMAGE=sinusbot/docker
+IMAGE=trugamr/sinusbot-docker-yt-dlp
 
 read -p "Pull from git? [Y/n] " -n 1 -r
 echo
@@ -20,10 +20,10 @@ if [[ $REPLY =~ ^([Yy]| ) ]] || [[ -z $REPLY ]]; then
 fi
 
 echo "Replacing version in files..."
-sed -i '' "s|^SINUSBOT_VERSION=.*|SINUSBOT_VERSION=\"$VERSION\"|g" discord/install.sh
-sed -i '' "s|^LABEL version.*|LABEL version=\"$VERSION\"|g" discord/Dockerfile
-sed -i '' "s|^FROM sinusbot.*|FROM $IMAGE:$VERSION-discord|g" Dockerfile
-sed -i '' "s|^LABEL version.*|LABEL version=\"$VERSION\"|g" Dockerfile
+sed -i "s|^SINUSBOT_VERSION=.*|SINUSBOT_VERSION=\"$VERSION\"|g" discord/install.sh
+sed -i "s|^LABEL version.*|LABEL version=\"$VERSION\"|g" discord/Dockerfile
+sed -i "s|^FROM sinusbot.*|FROM $IMAGE:$VERSION-discord|g" Dockerfile
+sed -i "s|^LABEL version.*|LABEL version=\"$VERSION\"|g" Dockerfile
 
 read -p "Show diff? [y/N] " -n 1 -r
 echo

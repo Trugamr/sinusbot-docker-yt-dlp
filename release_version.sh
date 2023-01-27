@@ -11,7 +11,7 @@ fi
 
 echo "Version: $VERSION"
 
-IMAGE=sinusbot/docker
+IMAGE=trugamr/sinusbot-docker-yt-dlp
 
 read -p "Pull from git? [Y/n] " -n 1 -r
 echo

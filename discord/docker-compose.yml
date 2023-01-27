@@ -1,5 +1,5 @@
 sinusbot:
-  image: sinusbot/docker:discord
+  image: trugamr/sinusbot-docker-yt-dlp:discord
   restart: always
   ports:
     - 8087:8087
