@@ -54,7 +54,8 @@ EOT
 	;;
 "yt-dlp")
 	echo "Downloading yt-dlp..."
-	curl -s -L -o /usr/local/bin/yt-dlp https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
+	# curl -s -L -o /usr/local/bin/yt-dlp https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
+	curl -s -L -o /usr/local/bin/yt-dlp https://github.com/yt-dlp/yt-dlp/releases/download/2022.11.11/yt-dlp
 	chmod 755 /usr/local/bin/yt-dlp
 	echo 'YoutubeDLPath = "/usr/local/bin/yt-dlp"' >> config.ini.configured
 	echo "Successfully installed yt-dlp"

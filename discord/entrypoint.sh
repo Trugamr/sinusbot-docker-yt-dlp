@@ -19,8 +19,9 @@ ln -fs data/config.ini config.ini
 SINUSBOT="./sinusbot"
 YTDL="yt-dlp"
 
-echo "Updating yt-dlp..."
-$YTDL --restrict-filename -U
+# echo "Updating yt-dlp..."
+# $YTDL --restrict-filename -U
+echo "Using yt-dlp..."
 $YTDL --version
 
 PID=0
